@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version:5.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -12,6 +12,7 @@ let package = Package(
             targets: ["FloatingButtonView"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.0.0")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -20,7 +21,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "FloatingButtonView",
-            dependencies: []),
+            dependencies: ["RxSwift", "RxCocoa"],
+            path: "Sources"),
         .testTarget(
             name: "FloatingButtonViewTests",
             dependencies: ["FloatingButtonView"]),

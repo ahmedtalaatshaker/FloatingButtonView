@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FloatingButtonView" customModule="BMCoreFramework">
+            <connections>
+                <outlet property="actionButton" destination="WPQ-FK-A2e" id="rOb-wr-1DU"/>
+                <outlet property="buttonImage" destination="iVj-sZ-P9Q" id="GWS-ks-lRc"/>
+                <outlet property="buttonLable" destination="CPB-3C-FEF" id="n9Z-Lc-MfL"/>
+                <outlet property="contentView" destination="yeW-yk-gHz" id="Wnq-G2-Fot"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yeW-yk-gHz">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-sX-WC1">
+                    <rect key="frame" x="20" y="50" width="16" height="16"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="iVj-sZ-P9Q">
+                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="WYd-rc-uC8"/>
+                                <constraint firstAttribute="width" secondItem="iVj-sZ-P9Q" secondAttribute="height" multiplier="1:1" id="ckb-oJ-IlA"/>
+                            </constraints>
+                        </imageView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPB-3C-FEF">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPQ-FK-A2e">
+                    <rect key="frame" x="0.0" y="48" width="56" height="34"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="4iP-0m-XCl"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="QTy-1B-C4S"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WPQ-FK-A2e" firstAttribute="leading" secondItem="QTy-1B-C4S" secondAttribute="leading" id="4ss-1h-TZp"/>
+                <constraint firstItem="QTy-1B-C4S" firstAttribute="bottom" secondItem="WPQ-FK-A2e" secondAttribute="bottom" id="CtV-XX-woQ"/>
+                <constraint firstItem="Ov8-sX-WC1" firstAttribute="centerY" secondItem="yeW-yk-gHz" secondAttribute="centerY" id="ORB-6o-FA5"/>
+                <constraint firstItem="Ov8-sX-WC1" firstAttribute="centerX" secondItem="yeW-yk-gHz" secondAttribute="centerX" id="XEm-9z-BzE"/>
+                <constraint firstItem="WPQ-FK-A2e" firstAttribute="top" secondItem="QTy-1B-C4S" secondAttribute="top" id="baV-Li-aMg"/>
+                <constraint firstItem="QTy-1B-C4S" firstAttribute="trailing" secondItem="WPQ-FK-A2e" secondAttribute="trailing" id="fU0-oQ-Q1O"/>
+                <constraint firstItem="QTy-1B-C4S" firstAttribute="trailing" secondItem="Ov8-sX-WC1" secondAttribute="trailing" constant="20" id="mf6-Iq-kMe"/>
+                <constraint firstItem="Ov8-sX-WC1" firstAttribute="leading" secondItem="QTy-1B-C4S" secondAttribute="leading" constant="20" id="u9w-kN-aA6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="124"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon" width="16" height="16"/>
+    </resources>
+</document>

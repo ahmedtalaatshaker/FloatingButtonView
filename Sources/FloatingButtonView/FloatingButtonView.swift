@@ -34,7 +34,7 @@ public class FloatingButtonView: UIView {
     }
 
     private func loadViewFromNib() {
-        fromNib(viewType: Self.self, frombunde: Bundle(identifier: "FloatingButtonView"))
+        fromNib(viewType: Self.self, frombunde: Self.self)
     }
 
     public func setupUI(image: UIImage, title: String, BGColor: UIColor, buttonAction: @escaping () -> Void) {

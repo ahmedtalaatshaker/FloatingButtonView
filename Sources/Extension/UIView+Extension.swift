@@ -8,7 +8,7 @@
 import UIKit
 extension UIView {
 
-//    @discardableResult
+    @discardableResult
     func fromNib<T: UIView>(viewType: T.Type, frombunde : Bundle? = nil) -> UIView? {
         let nibName = String(describing: viewType)
         guard let bundleName = frombunde else { return nil}

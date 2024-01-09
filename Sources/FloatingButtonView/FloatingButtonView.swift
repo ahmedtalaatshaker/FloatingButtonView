@@ -103,7 +103,7 @@ public class BMCoreManager {
 extension Foundation.Bundle {
     /// Returns the resource bundle associated with the current Swift module.
     static let module: Bundle = {
-        let bundleName = "FloatingButtonView"
+        let bundleName = "FloatingButtonView_FloatingButtonView"
 
         let overrides: [URL]
         #if DEBUG

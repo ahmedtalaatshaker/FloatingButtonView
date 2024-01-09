@@ -35,7 +35,7 @@ public class FloatingButtonView: UIView {
     }
 
     private func loadViewFromNib() {
-        var bundle = Bundle(for: Self.self)
+        var bundle = Bundle.module
         fromNib(viewType: Self.self, frombunde: bundle)
     }
 
@@ -88,15 +88,15 @@ public class FloatingButtonView: UIView {
 //    }
 //}
 
-
-public class BMCoreManager {
-
-    
-    public static func getFrameworkBundle<T>(viewType: T.Type) -> Bundle {
-#if SWIFT_PACKAGE
-        return Bundle.allBundles.last!
-#else
-        return Bundle(for: viewType.self as! AnyClass)
-#endif
-    }
-}
+//
+//public class BMCoreManager {
+//
+//    
+//    public static func getFrameworkBundle<T>(viewType: T.Type) -> Bundle {
+//#if SWIFT_PACKAGE
+//        return Bundle.allBundles.last!
+//#else
+//        return Bundle(for: viewType.self as! AnyClass)
+//#endif
+//    }
+//}

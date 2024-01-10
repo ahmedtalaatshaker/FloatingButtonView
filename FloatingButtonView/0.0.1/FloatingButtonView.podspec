@@ -76,7 +76,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ahmedtalaatshaker/FloatingButtonView", :tag => "1.0.3" }
+  spec.source       = { :git => "http://github.com/ahmedtalaatshaker/FloatingButtonView", :tag => "1.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

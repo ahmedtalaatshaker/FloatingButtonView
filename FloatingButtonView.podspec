@@ -24,8 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  spec.description  = "spec.description"
 
   spec.homepage     = "https://github.com/ahmedtalaatshaker/FloatingButtonView"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -67,12 +66,8 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  spec.ios.deployment_target      = '10.0'
-  spec.osx.deployment_target      = '10.12'
-  spec.watchos.deployment_target  = '3.0'
-  spec.tvos.deployment_target     = '10.0'
+  spec.ios.deployment_target      = '12.0'
 
-  # spec.visionos.deployment_target = "1.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -81,7 +76,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ahmedtalaatshaker/FloatingButtonView", :tag => "1.0.5" }
+  spec.source       = { :git => "https://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@github.com/ahmedtalaatshaker/FloatingButtonView", :tag => "1.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -92,8 +87,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "FloatingButtonView/**/*.{swift}"
-  spec.swift_version = '4.2'
+  spec.source_files  = 'Sources/**/*.{swift}'
+  spec.swift_version = '5.3'
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -119,8 +114,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "SomeFramework"
-  spec.frameworks = "UIKit", "RxSwift"
+  spec.framework  = "UIKit"
+  # spec.frameworks = "UIKit", "RxSwift"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -135,6 +130,7 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  spec.dependency "RxSwift", "~> 6.0.0"
+  spec.dependency "RxCocoa", "~> 6.0.0"
 
 end

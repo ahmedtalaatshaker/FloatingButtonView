@@ -47,8 +47,6 @@ public class FloatingButtonView: UIView {
     private var shouldExpand = false
     private let bag = DisposeBag()
     var lastContentOffset: CGFloat = 0
-
-    public var builder: FloatingButtonViewBuilder?
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -69,12 +67,8 @@ public class FloatingButtonView: UIView {
     }
 
     public func setupUI() {
-//        buttonImage.image = image
-//        buttonLable.text = title
-//        contentView.backgroundColor = BGColor
         contentView.layer.cornerRadius = 16
         expandButton(value: true)
-//        setupBinding(buttonAction: buttonAction)
     }
 
     private func setupBinding(buttonAction: @escaping () -> Void) {

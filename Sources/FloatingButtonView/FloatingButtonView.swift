@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Foundation
-protocol FloatingButtonViewBuilder {
+public protocol FloatingButtonViewBuilder {
     func addImage(image: UIImage) -> FloatingButtonView
     func addTitle(title: String) -> FloatingButtonView
     func addBGColor(color: UIColor) -> FloatingButtonView
@@ -17,22 +17,22 @@ protocol FloatingButtonViewBuilder {
 }
 
 extension FloatingButtonView: FloatingButtonViewBuilder {
-    func addImage(image: UIImage) -> FloatingButtonView {
+    public func addImage(image: UIImage) -> FloatingButtonView {
         buttonImage.image = image
         return self
     }
     
-    func addTitle(title: String) -> FloatingButtonView {
+    public func addTitle(title: String) -> FloatingButtonView {
         buttonLable.text = title
         return self
     }
     
-    func addBGColor(color: UIColor) -> FloatingButtonView {
+    public func addBGColor(color: UIColor) -> FloatingButtonView {
         contentView.backgroundColor = color
         return self
     }
     
-    func addButtonAction(action: @escaping () -> Void) -> FloatingButtonView {
+    public func addButtonAction(action: @escaping () -> Void) -> FloatingButtonView {
         setupBinding(buttonAction: action)
         return self
     }

@@ -48,6 +48,8 @@ public class FloatingButtonView: UIView {
     private let bag = DisposeBag()
     var lastContentOffset: CGFloat = 0
 
+    var builder: FloatingButtonViewBuilder?
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()

@@ -9,6 +9,34 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Foundation
+protocol FloatingButtonViewBuilder {
+    func addImage(image: UIImage) -> FloatingButtonView
+    func addTitle(title: String) -> FloatingButtonView
+    func addBGColor(color: UIColor) -> FloatingButtonView
+    func addButtonAction(action: @escaping () -> Void) -> FloatingButtonView
+}
+
+extension FloatingButtonView: FloatingButtonViewBuilder {
+    func addImage(image: UIImage) -> FloatingButtonView {
+        buttonImage.image = image
+        return self
+    }
+    
+    func addTitle(title: String) -> FloatingButtonView {
+        buttonLable.text = title
+        return self
+    }
+    
+    func addBGColor(color: UIColor) -> FloatingButtonView {
+        contentView.backgroundColor = color
+        return self
+    }
+    
+    func addButtonAction(action: @escaping () -> Void) -> FloatingButtonView {
+        setupBinding(buttonAction: action)
+        return self
+    }
+}
 
 public class FloatingButtonView: UIView {
     @IBOutlet weak var contentView: UIView!
@@ -38,13 +66,13 @@ public class FloatingButtonView: UIView {
         fromNib(viewType: Self.self, frombunde: Bundle.module)
     }
 
-    public func setupUI(image: UIImage, title: String, BGColor: UIColor, buttonAction: @escaping () -> Void) {
-        buttonImage.image = image
-        buttonLable.text = title
-        contentView.backgroundColor = BGColor
+    public func setupUI() {
+//        buttonImage.image = image
+//        buttonLable.text = title
+//        contentView.backgroundColor = BGColor
         contentView.layer.cornerRadius = 16
         expandButton(value: true)
-        setupBinding(buttonAction: buttonAction)
+//        setupBinding(buttonAction: buttonAction)
     }
 
     private func setupBinding(buttonAction: @escaping () -> Void) {
